@@ -57,11 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
         cityList.setOnItemClickListener((parent, view, position, id) -> {
             if (selectedPosition == position) {
-                // clicked the selected item -> de-select it
                 selectedPosition = -1;
                 cityList.setItemChecked(position, false);
             } else {
-                // select new item (ListView will unselect old automatically in single-choice mode)
                 selectedPosition = position;
                 cityList.setItemChecked(position, true);
             }
